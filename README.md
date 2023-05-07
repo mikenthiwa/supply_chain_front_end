@@ -1,47 +1,88 @@
-# TypeScript Next.js example
+# Farm Produce Tracking System
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+This repository contains the frontend code for the Supply Chain Tracker app. The application is built using Next.js, React, Redux, and Tailwind CSS.
 
-## Deploy your own
+## Table of Contents
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the App](#running-the-app)
+- [Building the App for Production](#building-the-app-for-production)
+- [Docker Deployment](#docker-deployment)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+## Features
 
-## How to use it?
+- Track the status history of farm produce shipments
+- Responsive design for improved user experience on various screen sizes
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Prerequisites
+
+- Node.js 16.8.0 or higher
+- Yarn package manager
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
+git clone https://github.com/your-username/supply-chain-tracker-frontend.git
 ```
+
+2. Change into the project directory:
 
 ```bash
-yarn create next-app --example with-typescript with-typescript-app
+cd supply-chain-tracker-frontend
 ```
+
+3. Install dependencies:
 
 ```bash
-pnpm create next-app --example with-typescript with-typescript-app
+yarn install
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Running the App
 
-## Notes
+To start the development server, run:
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
+```bash
+yarn dev
 ```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+The app will be accessible at `http://localhost:3000`.
 
+## Building the App for Production
+
+To build the app for production, run:
+
+```bash
+yarn build
 ```
-npm install --save-dev @types/react @types/react-dom @types/node
+
+This will generate an optimized build in the `.next` folder.
+
+To start the production server, run:
+
+```bash
+yarn start
 ```
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+The app will be accessible at `http://localhost:3000`.
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+## Docker Deployment
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+The app can also be deployed using Docker. Make sure Docker is installed on your machine.
+
+1. Build the Docker image:
+
+```bash
+docker build -t your-image-name .
+```
+
+2. Run the Docker container:
+
+```bash
+docker run -p 3001:3001 your-image-name
+```
+
+The app will be accessible at `http://localhost:3001`.
