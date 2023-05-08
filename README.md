@@ -35,6 +35,12 @@ git clone https://github.com/your-username/supply-chain-tracker-frontend.git
 cd supply-chain-tracker-frontend
 ```
 
+## Environment Variables
+The application requires certain environment variables to function correctly. You can create a .env file in the root folder of the project to configure these variables for development.
+```sh
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+```
+
 3. Install dependencies:
 
 ```bash
